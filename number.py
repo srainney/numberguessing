@@ -5,11 +5,11 @@ print('    GUESS THE NUMBER')
 print('------------------------')
 print('')
 
+name = input('What is your name? ')
 # Generates a random number between 0 and 100
 the_number = random.randint(1, 99)
 # Used to initiate the while statement
 guess = "text"
-the_number
 
 while guess != the_number:
     # Checking if the supplied value is within the specified range
@@ -25,10 +25,10 @@ while guess != the_number:
         continue
     # Prints the output for each guess
     if guess < the_number:
-        print('Too low!')
+        print('Sorry, {}, your guess of {} was too low.'.format(name, guess))
     elif guess > the_number:
-        print('Too high!')
+        print('Sorry, {}, your guess of {} was too high.'.format(name, guess))
     else:
-        print('You win!')
+        print('You win, {}! Congratulations!'.format(name))
 
 input('Press ENTER to exit')
